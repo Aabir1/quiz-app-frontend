@@ -47,6 +47,15 @@ ApiQuestions.getByQuiz = async (params) => {
     return data;
 };
 
+/**
+ * save question
+ *
+ * @param {object} model
+ *
+ * @returns {any} data
+ *
+ * @author Aabir Hussain <aabir.hussain1@gmail.com>
+ */
 ApiQuestions.save = async (model) => {
     let data = false;
     try {

@@ -1,6 +1,11 @@
 import React from 'react';
 import UrlManager from '../Routers/UrlManager';
 
+/**
+ * Header of the application
+ *
+ * @author Aabir Hussain <aabir.hussain1@gmail.com>
+ */
 export default class Header extends React.Component {
     render() {
         return (

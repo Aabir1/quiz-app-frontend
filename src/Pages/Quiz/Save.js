@@ -6,7 +6,11 @@ import Loader from '../../Components/Loader';
 import MetaHelper from '../../Helpers/MetaHelper';
 import UrlManager from '../../Routers/UrlManager';
 
-
+/**
+ * it is responsible to display & handle save quiz
+ *
+ * @author Aabir Hussain <aabir.hussain1@gmail.com>
+ */
 export default class QuizSave extends Component {
     constructor(props) {
         super(props)
@@ -18,6 +22,15 @@ export default class QuizSave extends Component {
         };
     };
 
+
+    /**
+     * Save values to state when user enter
+     *
+     * @param {String} name 
+     * @param {String} value 
+     *
+     * @author Aabir Hussain <aabir.hussain1@gmail.com>
+     */
     handleChange = (name, value) => {
         let model = this.state.model;
         model[name] = value;
@@ -25,6 +38,13 @@ export default class QuizSave extends Component {
         this.setState({ model: model });
     };
 
+    /**
+     * validate complete form data
+     *
+     * @returns {Boolean} result
+     *
+     * @author Aabir Hussain <aabir.hussain1@gmail.com>
+     */
     validate = () => {
         let errors = {};
         let result = true;
@@ -41,11 +61,18 @@ export default class QuizSave extends Component {
         return result;
     }
 
+    /**
+     * validate and save data into api
+     *
+     * @author Aabir Hussain <aabir.hussain1@gmail.com>
+     */
     handleSubmit = async () => {
         if (this.validate()) {
             const result = await ApiQuiz.save(this.state.model);
-            alert('Created Successfully');
-            window.location.href = UrlManager.QUIZ.GET_ALL;
+            if (result) {
+                alert('Created Successfully');
+                window.location.href = UrlManager.QUIZ.GET_ALL;
+            }
         }
     }
 

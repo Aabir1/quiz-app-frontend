@@ -6,7 +6,11 @@ import Single from './Partials/Single'
 import ApiQuiz from '../../Apis/Quiz/ApiQuiz'
 import UrlManager from '../../Routers/UrlManager'
 
-
+/**
+ * Display all quiz list
+ *
+ * @author Aabir Hussain <aabir.hussain1@gmail.com>
+ */
 export default class List extends Component {
     constructor(props) {
         super(props)

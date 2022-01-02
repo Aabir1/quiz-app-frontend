@@ -7,7 +7,11 @@ import UrlManager from '../../Routers/UrlManager';
 import UrlHelper from '../../Helpers/UrlHelper';
 import ApiQuestions from '../../Apis/Questions/ApiQuestions';
 
-
+/**
+ * Display and handle question save
+ *
+ * @author Aabir Hussain <aabir.hussain1@gmail.com>
+ */
 export default class QuestionsSave extends Component {
     constructor(props) {
         super(props)
@@ -26,6 +30,14 @@ export default class QuestionsSave extends Component {
         };
     };
 
+    /**
+     * Save values to state when user enter
+     *
+     * @param {String} name 
+     * @param {String} value 
+     *
+     * @author Aabir Hussain <aabir.hussain1@gmail.com>
+     */
     handleChange = (name, value) => {
         let model = this.state.model;
         model[name] = value;
@@ -33,6 +45,13 @@ export default class QuestionsSave extends Component {
         this.setState({ model: model });
     };
 
+    /**
+     * validate complete form data
+     *
+     * @returns {Boolean} result
+     *
+     * @author Aabir Hussain <aabir.hussain1@gmail.com>
+     */
     validate = () => {
         let errors = {};
         let result = true;
@@ -64,6 +83,11 @@ export default class QuestionsSave extends Component {
         return result;
     }
 
+    /**
+     * validate and save data into api
+     *
+     * @author Aabir Hussain <aabir.hussain1@gmail.com>
+     */
     handleSubmit = async () => {
         if (this.validate()) {
             const result = await ApiQuestions.save(this.state.model);

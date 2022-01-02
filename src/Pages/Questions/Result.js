@@ -6,7 +6,11 @@ import ApiQuestions from '../../Apis/Questions/ApiQuestions'
 import UrlHelper from '../../Helpers/UrlHelper'
 import UrlManager from '../../Routers/UrlManager'
 
-
+/**
+ * Display result of a quiz
+ *
+ * @author Aabir Hussain <aabir.hussain1@gmail.com>
+ */
 export default class Results extends Component {
     constructor(props) {
         super(props)

@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import ArrayHelper from '../../../Helpers/ArrayHelper';
 import TextHelper from '../../../Helpers/TextHelper';
 
+/**
+ * Display single result
+ *
+ * @author Aabir Hussain <aabir.hussain1@gmail.com>
+ */
 export default class Single extends Component {
-    constructor(props) {
-        super(props);
-        console.log('this.props.data', this.props.data.answer);
-    }
     render() {
         return (
             <tr>

@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import TextHelper from '../../../Helpers/TextHelper';
 
-
+/**
+ * Display single question
+ *
+ * @author Aabir Hussain <aabir.hussain1@gmail.com>
+ */
 export default class Single extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <tr>

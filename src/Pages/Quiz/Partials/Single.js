@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import UrlManager from '../../../Routers/UrlManager';
 
+/**
+ * Single component responsible to show single
+ * quiz information
+ *
+ * @author Aabir Hussain <aabir.hussain1@gmail.com>
+ */
 export default class Single extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <tr>

@@ -1,3 +1,9 @@
+
+/**
+ * All validation will be written in this file
+ *
+ * @author Aabir Hussain <aabir.hussain1@gmail.com>
+ */
 let ValidationHelper = {};
 
 ValidationHelper.DEFAULT_ALLOWED_IMAGE_EXT = [

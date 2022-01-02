@@ -11,17 +11,12 @@ import QuestionsList from "../Pages/Questions/List";
 import Result from "../Pages/Questions/Result";
 import QuestionsSave from "../Pages/Questions/Save";
 
+/**
+ * initializer contains all routes
+ *
+ * @author Aabir Hussain <aabir.hussain1@gmail.com>
+ */
 class Initializer extends React.Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            isLogin: false,
-            user: false,
-            isSuperAdmin: false,
-            isReady: false
-        }
-    }
 
     render() {
         return (
