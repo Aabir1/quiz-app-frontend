@@ -17,7 +17,7 @@ export default class Single extends Component {
                     this.props.data.answer && <>
                         <td>{ArrayHelper.selectedOptionText(this.props.data.answer.selectedOption)}</td>
                         <td title={this.props.data.answer.answer}>
-                            {TextHelper.limitText(this.props.data.answer.answer, 7)}
+                            {TextHelper.limitText(this.props.data.answer.answer, 10)}
                         </td>
                         <td title={this.props.data.answer.createdAt}>
                             {this.props.data.answer.displayTime || this.props.data.answer.createdAt}
