@@ -15,7 +15,7 @@ export default class Single extends Component {
                 </td>
                 <td>
                     <a
-                        href={UrlManager.QUESTIONS.GET_ALL + '?quiz=' + this.props.data.id}
+                        href={UrlManager.QUESTIONS.GET_RESULTS + '?quiz=' + this.props.data.id}
                         title={'View Results'}
                     >
                         <i className='fa fa-sticky-note-o'></i>

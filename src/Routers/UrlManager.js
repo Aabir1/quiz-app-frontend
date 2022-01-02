@@ -8,6 +8,7 @@ UrlManager.QUIZ = {
 
 UrlManager.QUESTIONS = {
     GET_ALL: '/questions/get-all',
+    GET_RESULTS: '/questions/get-result',
     SAVE: '/questions/save'
 }
 

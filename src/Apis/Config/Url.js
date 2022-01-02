@@ -14,6 +14,7 @@ export const API_QUESTION = {
     SAVE: BASE_URL_QUIZ + 'quiz/questions/save',
     GET_ALL: BASE_URL_QUIZ + 'quiz/questions/get-all',
     GET_BY_QUIZ: BASE_URL_QUIZ + 'quiz/questions/get-by-quiz',
+    GET_RESULT: BASE_URL_QUIZ + 'quiz/questions/get-result',
 };
 
 export const API_ANSWERS = {

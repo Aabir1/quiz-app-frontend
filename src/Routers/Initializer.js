@@ -8,6 +8,7 @@ import QuizSave from "../Pages/Quiz/Save";
 import QuizList from "../Pages/Quiz/List";
 
 import QuestionsList from "../Pages/Questions/List";
+import Result from "../Pages/Questions/Result";
 import QuestionsSave from "../Pages/Questions/Save";
 
 class Initializer extends React.Component {
@@ -48,6 +49,12 @@ class Initializer extends React.Component {
                             path={UrlManager.QUESTIONS.GET_ALL}
                             exact
                             render={() => <QuestionsList />}
+                        />
+
+                        <Route
+                            path={UrlManager.QUESTIONS.GET_RESULTS}
+                            exact
+                            render={() => <Result />}
                         />
                     </Switch>
                 </Router>
