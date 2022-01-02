@@ -1,55 +1,25 @@
 
 let ArrayHelper = {};
 
-//DEEPAK STARTS
-// set up a function that iterates through a given array
-// if one of the elements is an array, call itself with that element
-// (Edited)
-// if elements of the array is an object, we make sure to take care of that too.
-ArrayHelper.deepCopy = (arr) => {
-    let copy = [];
-    arr.forEach((elem) => {
-        if (Array.isArray(elem)) {
-            copy.push(ArrayHelper.deepCopy(elem));
-        } else {
-            if (typeof elem === "object" && elem !== null) {
-                if (typeof elem.getMonth === "function") {
-                    copy.push(elem);
-                } else {
-                    copy.push(ArrayHelper.deepCopyObject(elem));
-                }
-            } else {
-                copy.push(elem);
-            }
-        }
-    });
-    return copy;
-};
 
-// Helper function to deal with Objects
-ArrayHelper.deepCopyObject = (obj) => {
-    let tempObj = {};
-
-    for (let [key, value] of Object.entries(obj)) {
-        if (Array.isArray(value)) {
-            tempObj[key] = ArrayHelper.deepCopy(value);
-        } else {
-            if (typeof value === "object" && value !== null) {
-                if (typeof value.getMonth === "function") {
-                    tempObj[key] = value;
-                } else {
-                    tempObj[key] = ArrayHelper.deepCopyObject(value);
-                }
-            } else {
-                tempObj[key] = value;
-            }
-        }
+ArrayHelper.selectedOptionText = (selectedOption) => {
+    let result = '--';
+    switch (selectedOption) {
+        case 1:
+            result = 'optionOne'
+            break;
+        case 2:
+            result = 'optionTwo'
+            break;
+        case 3:
+            result = 'optionThree'
+            break;
+        default:
+            break;
     }
-    return tempObj;
-};
-//DEEPAK ENDS
 
-
+    return result;
+}
 /**
  * Convert a string with separator into array
  *

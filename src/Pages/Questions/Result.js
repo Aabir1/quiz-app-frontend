@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import Pagination from '../../Components/Pagination'
 import Loader from '../../Components/Loader'
 import MetaHelper from '../../Helpers/MetaHelper'
-import Single from './Partials/Single'
+import Single from './Partials/SingleResult'
 import ApiQuestions from '../../Apis/Questions/ApiQuestions'
 import UrlHelper from '../../Helpers/UrlHelper'
 import UrlManager from '../../Routers/UrlManager'
@@ -62,9 +61,9 @@ export default class Results extends Component {
                                             <tr>
                                                 <th>Question</th>
                                                 <th>Right Option</th>
-                                                <th>Selected Option</th>
-                                                <th>Input Text</th>
-                                                <th>Answered At</th>
+                                                <th>USER Selected Option</th>
+                                                <th>USER Input Text</th>
+                                                <th>USER Answered At</th>
                                             </tr>
                                         </thead>
                                         {(this.state.data && this.state.data.length !== 0) && <tbody>
